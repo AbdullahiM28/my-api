@@ -1,3 +1,5 @@
+// use OpenAPI for documentation
+
 const express = require('express');
 const app = express();
 const PORT = 8080;
@@ -8,13 +10,13 @@ function my_mssg() {
     console.log(`it's on http://localhost:${PORT}`)
 }
 
-/* app.get('/tshirt', (req, res) => {
+app.get('/tshirt', (req, res) => {
     res.status(200).send({
         tshirt: '👕',
         size: 'large'
     })
 });
-*/
+
 
 app.post('/tshirt/:id', (req, res) => {
     const { id } = req.params;
